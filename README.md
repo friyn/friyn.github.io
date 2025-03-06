@@ -14,3 +14,5 @@ This project is licensed under the MIT License. See `LICENSE` for details.
 ## Contact
 For any inquiries, reach out via:
 - Email: friynbusiness@gmail.com
+- TikTok: [@friyn](https://tiktok.com/@friyn)
+- WhatsApp: [@friyn](https://api.whatsapp.com/send/?phone=6281252766753&text&type=phone_number&app_absent=0)
