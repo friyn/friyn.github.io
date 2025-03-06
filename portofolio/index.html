@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@google/generative-ai@0.1.3/dist/index.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+</head>
+<body> 
+    <audio id="background-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <header class="glass-nav">
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Logo" style="width: 50px; height: 50px; vertical-align: middle;">
+                <span style="margin-left: 10px; font-weight: bold; vertical-align: middle;">Rekayasa Perangkat Lunak</span>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#services"><i class="fas fa-cogs"></i> Services</a></li>
+                    <li><a href="#timetable"><i class="fas fa-calendar-alt"></i> Timetable</a></li>
+                    <li class="dropdown">
+                        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+                        <div class="dropdown-content">
+                            <p><a href="mailto:friynbusiness@gmail.com">Email Me</a></p>
+                            <p><a href="tel:+6281252766753">Text Me</a></p>
+                            <p><a href="https://maps.google.com/?q=Tanggul, Jember, Indonesia" target="_blank">Find Me</a></p>
+                            <p><a href="#contact">Get In Touch</a></p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="theme-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <label for="theme-toggle" class="theme-label">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </label>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content" style="flex: 1; margin-left: 20%;">
+                <h1>Hi, I'm <span class="highlight">Dhani Fernanda</span></h1>
+                <p class="typewriter">Student that currently studying at SMKN 6 Jember</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn primary-btn">Contact Me</a>
+                    <a href="#services" class="btn secondary-btn">Services</a>
+                    <button id="play-button"><i class="fas fa-play"></i></button>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.tiktok.com/@friyn"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/friynmusic/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@FriynMusic/"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div style="flex: 1; display: flex; justify-content: left; align-items: flex-start; margin-top: -200px;">
+                <img src="me.png" alt="Dhani Fernanda" style="max-width: 50%; height: auto; border-radius: 10px;">
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <h2 class="section-title">What I Do</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Creating a simple Website Project.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-palette"></i>
+                    <h3>Web Design</h3>
+                    <p>Designing a simple Website Project.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Game Developer</h3>
+                    <p>Building cross-platform game applications.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="timetable" class="timetable-section">
+            <h2 class="section-title">Lesson Timetable</h2>
+                <table border="2" class="timetable-table">
+                    <tr style="font-weight: bold ; color: var(--primary-color);">
+                        <td>SENIN</td>
+                        <td>SELASA</td>
+                        <td>RABU</td>
+                        <td>KAMIS</td>
+                        <td>JUM'AT</td>
+                    </tr>
+                    <tr>
+                        <td>PPLG</td>
+                        <td>PPLG</td>
+                        <td>TIK</td>
+                        <td>IPAS</td>
+                        <td>PPKN</td>
+                    </tr>
+                    <tr>
+                        <td>PPLG</td>
+                        <td>ENGLISH</td>
+                        <td>AGAMA</td>
+                        <td>BP/BK</td>
+                        <td>INDONESIA</td>
+                    </tr>
+                    <tr>
+                        <td>PPLG</td>
+                        <td>IPAS</td>
+                        <td>PENJAS</td>
+                        <td>SEJARAH</td>
+                        <td>DAERAH</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>MTK</td>
+                        <td>SENI BUDAYA</td>
+                    </tr>
+                </table>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>friynbusiness@gmail.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>+62 812-5276-6753</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-location-dot"></i>
+                        <h3>Location</h3>
+                        <p>Tanggul, Jember, Indonesia</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+                    <li style="margin-bottom: 8px;">
+                        <a href="mailto:friynbusiness@gmail.com" style="color: #808080; text-decoration: none; font-size: 0.9em;">
+                            <i class="fas fa-envelope"></i> friynbusiness@gmail.com
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="tel:+6281252766753" style="color: #808080; text-decoration: none; font-size: 0.9em;">
+                            <i class="fas fa-phone"></i> +62 812-5276-6753
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://maps.google.com/?q=Tanggul, Jember, Indonesia" target="_blank" style="color: #808080; text-decoration: none; font-size: 0.9em;">
+                            <i class="fas fa-location-dot"></i> Tanggul, Jember, Indonesia
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Me</h3>
+                <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://www.tiktok.com/@friyn" style="color: #808080; text-decoration: none; font-size: 0.9em;">
+                            <i class="fab fa-tiktok"></i> @friyn
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://www.instagram.com/friynmusic/" style="color: #808080; text-decoration: none; font-size: 0.9em;">
+                            <i class="fab fa-instagram"></i> @friynmusic
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <a href="https://www.youtube.com/@FriynMusic/" style="color: #808080; text-decoration: none; font-size: 0.9em;">
+                            <i class="fab fa-youtube"></i> @FriynMusic
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <!-- <p>&copy; 2025 Friyn. All Rights Reserved.</p> -->
+            <p>&copy; Rekayasa Perangkat Lunak. X RPL 1</p>
+        </div>
+    </footer>
+</body>
+</html>
