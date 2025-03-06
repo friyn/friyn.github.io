@@ -13,4 +13,4 @@ This project is licensed under the MIT License. See `LICENSE` for details.
 
 ## Contact
 For any inquiries, reach out via:
-- Email: friynbussines@gmail.com
+- Email: friynbusiness@gmail.com
