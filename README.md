@@ -6,7 +6,7 @@
 This is a website for my school or my personal project.
 
 ## Project links
-- Portofolio: [Portofolio](https://friyn.github.io/portofolio/)
+- Portofolio: [Portofolio](https://dhani.gay)
 
 ## License
 This project is licensed under the MIT License. See `LICENSE` for details.
